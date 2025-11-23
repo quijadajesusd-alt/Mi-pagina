@@ -2,22 +2,22 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>JQ Wear – Vêtements sportifs & casual personnalisés</title>
+  <title>JQ Wear – Boutique</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="JQ Wear – Vêtements sportifs et streetwear personnalisés à Repentigny, Québec. Hoodies, t-shirts, joggers et ensembles pour particuliers, équipes et petites entreprises." />
+  <meta name="description" content="JQ Wear – Boutique de vêtements sportifs et casual personnalisés à Repentigny, Québec." />
 
   <style>
     :root {
-      --bg: #05060a;
-      --bg-soft: #0d0f18;
-      --accent: #f97316;
-      --accent-soft: rgba(249,115,22,0.12);
-      --text: #f9fafb;
-      --muted: #9ca3af;
-      --card: #111827;
-      --border: #1f2933;
+      --bg: #f3f4f6;
+      --bg-soft: #ffffff;
+      --accent: #111827;
+      --accent-soft: #e5e7eb;
+      --text: #111827;
+      --muted: #6b7280;
+      --card: #ffffff;
+      --border: #e5e7eb;
       --radius-xl: 18px;
-      --shadow-soft: 0 18px 40px rgba(0,0,0,0.45);
+      --shadow-soft: 0 10px 25px rgba(15, 23, 42, 0.08);
     }
 
     * {
@@ -28,7 +28,7 @@
     body {
       margin: 0;
       font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: radial-gradient(circle at top, #111827 0, #020617 45%, #000 100%);
+      background: var(--bg);
       color: var(--text);
       line-height: 1.6;
     }
@@ -39,17 +39,19 @@
     }
 
     .page {
-      max-width: 1120px;
+      max-width: 1200px;
       margin: 0 auto;
-      padding: 24px 16px 80px;
+      padding: 20px 16px 60px;
     }
+
+    /* HEADER */
 
     header {
       display: flex;
       justify-content: space-between;
       align-items: center;
       gap: 16px;
-      margin-bottom: 32px;
+      margin-bottom: 20px;
     }
 
     .logo {
@@ -62,13 +64,14 @@
       width: 32px;
       height: 32px;
       border-radius: 999px;
-      background: conic-gradient(from 180deg, #f97316, #facc15, #ec4899, #f97316);
+      background: radial-gradient(circle at 30% 0, #f97316, #111827);
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 700;
-      font-size: 18px;
-      box-shadow: 0 0 24px rgba(249,115,22,0.7);
+      font-size: 17px;
+      color: #f9fafb;
+      box-shadow: 0 10px 20px rgba(15, 23, 42, 0.4);
     }
 
     .logo-text {
@@ -78,7 +81,7 @@
     }
 
     .logo-text span:first-child {
-      font-size: 12px;
+      font-size: 11px;
       text-transform: uppercase;
       letter-spacing: 0.16em;
       color: var(--muted);
@@ -97,348 +100,258 @@
     }
 
     nav a {
-      padding: 8px 12px;
+      padding: 6px 10px;
       border-radius: 999px;
-      border: 1px solid transparent;
     }
 
     nav a:hover {
-      border-color: rgba(148,163,184,0.4);
-      background: rgba(15,23,42,0.8);
+      background: var(--accent-soft);
       color: var(--text);
     }
 
-    .hero {
+    /* TITRE PRINCIPAL */
+
+    .page-title {
+      margin-bottom: 18px;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 10px;
+    }
+
+    .page-title h1 {
+      margin: 0;
+      font-size: 22px;
+    }
+
+    .page-title span {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* LAYOUT BOUTIQUE */
+
+    .shop-layout {
       display: grid;
-      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
-      gap: 32px;
-      align-items: center;
-      margin-bottom: 48px;
+      grid-template-columns: 260px minmax(0, 1fr);
+      gap: 20px;
+      align-items: flex-start;
     }
 
-    .badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      padding: 4px 10px 4px 4px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.9);
-      border: 1px solid rgba(148,163,184,0.4);
-      font-size: 12px;
-      color: var(--muted);
-      margin-bottom: 14px;
+    /* SIDEBAR FILTRES */
+
+    .filters {
+      background: var(--bg-soft);
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      padding: 16px 14px;
+      box-shadow: var(--shadow-soft);
+      font-size: 13px;
     }
 
-    .badge-pill {
-      padding: 4px 10px;
-      border-radius: 999px;
-      background: var(--accent-soft);
-      color: var(--accent);
-      font-weight: 600;
-      font-size: 11px;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .hero h1 {
-      font-size: clamp(32px, 3.2vw, 40px);
-      line-height: 1.1;
-      margin: 0 0 12px;
-    }
-
-    .hero h1 span {
-      background: linear-gradient(to right, #f97316, #facc15);
-      -webkit-background-clip: text;
-      color: transparent;
-    }
-
-    .hero p {
-      margin: 0 0 20px;
-      color: var(--muted);
-      max-width: 520px;
+    .filters h2 {
+      margin: 0 0 10px;
       font-size: 15px;
     }
 
-    .hero-actions {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      margin-bottom: 10px;
+    .filter-group {
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
     }
 
-    .btn {
-      border-radius: 999px;
-      padding: 10px 18px;
-      font-size: 14px;
-      border: 1px solid transparent;
-      cursor: pointer;
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      transition: all 0.18s ease;
+    .filter-group:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+      margin-bottom: 0;
     }
 
-    .btn-primary {
-      background: radial-gradient(circle at top left, #facc15, #f97316);
-      color: #0b0f1a;
-      font-weight: 600;
-      box-shadow: 0 14px 32px rgba(249,115,22,0.45);
-    }
-
-    .btn-primary:hover {
-      transform: translateY(-1px) scale(1.01);
-      box-shadow: 0 16px 40px rgba(249,115,22,0.6);
-    }
-
-    .btn-ghost {
-      border-color: rgba(148,163,184,0.4);
-      background: rgba(15,23,42,0.9);
-      color: var(--muted);
-    }
-
-    .hero-meta {
+    .filter-title {
       font-size: 12px;
-      color: var(--muted);
-    }
-
-    .hero-card {
-      background: radial-gradient(circle at top, rgba(249,115,22,0.18), rgba(15,23,42,0.98));
-      border-radius: 28px;
-      padding: 18px 18px 16px;
-      border: 1px solid rgba(148,163,184,0.5);
-      box-shadow: var(--shadow-soft);
-      position: relative;
-      overflow: hidden;
-      font-size: 13px;
-    }
-
-    .hero-card-title {
-      font-size: 18px;
-      font-weight: 600;
-      margin-bottom: 8px;
-    }
-
-    .hero-card-sub {
-      font-size: 13px;
-      color: var(--muted);
-      margin-bottom: 10px;
-    }
-
-    .hero-card-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0,1fr));
-      gap: 10px;
-      font-size: 12px;
-    }
-
-    .hero-tag {
-      font-size: 11px;
-      padding: 4px 8px;
-      border-radius: 999px;
-      background: rgba(15,23,42,0.96);
-      border: 1px solid rgba(55,65,81,0.9);
-      color: var(--muted);
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      justify-content: space-between;
-    }
-
-    .hero-tag span {
-      font-size: 13px;
-      font-weight: 600;
-      color: #fbbf24;
-    }
-
-    .section {
-      margin-bottom: 40px;
-    }
-
-    .section-label {
-      font-size: 11px;
       text-transform: uppercase;
-      letter-spacing: 0.16em;
+      letter-spacing: 0.14em;
       color: var(--muted);
       margin-bottom: 6px;
     }
 
-    .section-header {
+    .filter-option {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-bottom: 4px;
+      color: var(--text);
+    }
+
+    .filter-option input {
+      accent-color: #111827;
+    }
+
+    /* BARRE DU HAUT LISTE PRODUITS */
+
+    .products-header {
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 18px;
-    }
-
-    .section-title {
-      font-size: 18px;
-      font-weight: 600;
-    }
-
-    .section-sub {
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .grid-2 {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 16px;
-    }
-
-    .card {
-      background: rgba(15,23,42,0.96);
-      border-radius: var(--radius-xl);
-      border: 1px solid var(--border);
-      padding: 14px 14px 16px;
-      box-shadow: 0 10px 28px rgba(0,0,0,0.45);
-    }
-
-    .card-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
       gap: 10px;
-      margin-bottom: 8px;
-    }
-
-    .card-title {
-      font-size: 15px;
-      font-weight: 600;
-    }
-
-    .card-badge {
-      font-size: 11px;
-      padding: 3px 9px;
-      border-radius: 999px;
-      background: rgba(249,115,22,0.12);
-      color: var(--accent);
-      border: 1px solid rgba(249,115,22,0.5);
-    }
-
-    .card p {
-      margin: 0 0 8px;
+      margin-bottom: 10px;
       font-size: 13px;
-      color: var(--muted);
-    }
-
-    .list {
-      margin: 0;
-      padding-left: 18px;
-      font-size: 13px;
-      color: var(--muted);
-    }
-
-    .list li {
-      margin-bottom: 4px;
     }
 
     .pill-row {
       display: flex;
       flex-wrap: wrap;
       gap: 6px;
-      margin-top: 8px;
     }
 
     .pill {
-      font-size: 11px;
-      padding: 4px 8px;
+      padding: 4px 10px;
       border-radius: 999px;
-      border: 1px solid rgba(55,65,81,0.9);
-      background: rgba(15,23,42,0.96);
+      background: #e5e7eb;
+      color: #374151;
+      font-size: 12px;
+    }
+
+    .select-small {
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #ffffff;
+      padding: 4px 8px;
+      font-size: 12px;
       color: var(--muted);
     }
 
-    .contact-grid {
+    /* GRID PRODUITS */
+
+    .products-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       gap: 16px;
     }
 
-    .field {
-      display: flex;
-      flex-direction: column;
-      gap: 4px;
-      font-size: 13px;
-      margin-bottom: 8px;
+    @media (max-width: 980px) {
+      .products-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
-    .field label {
+    @media (max-width: 640px) {
+      .shop-layout {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      .products-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+      nav {
+        display: none;
+      }
+    }
+
+    .product-card {
+      background: var(--card);
+      border-radius: 18px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      box-shadow: var(--shadow-soft);
+      transition: transform 0.12s ease, box-shadow 0.12s ease;
+    }
+
+    .product-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 30px rgba(15, 23, 42, 0.16);
+    }
+
+    .product-image-wrapper {
+      position: relative;
+      background: #f9fafb;
+    }
+
+    .product-image {
+      width: 100%;
+      display: block;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+    }
+
+    .favorite-btn {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 26px;
+      height: 26px;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.9);
+      border: 1px solid var(--border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    .product-body {
+      padding: 10px 10px 11px;
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+      font-size: 13px;
+    }
+
+    .color-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 2px;
+      flex-wrap: wrap;
+    }
+
+    .color-dot {
+      width: 14px;
+      height: 14px;
+      border-radius: 999px;
+      border: 1px solid rgba(0,0,0,0.12);
+    }
+
+    .product-name {
+      font-weight: 500;
+      font-size: 13px;
+    }
+
+    .product-meta {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .price-current {
+      font-weight: 600;
+    }
+
+    .price-old {
+      font-size: 12px;
+      color: var(--muted);
+      text-decoration: line-through;
+    }
+
+    .product-tagline {
+      font-size: 12px;
       color: var(--muted);
     }
 
-    .field input,
-    .field textarea {
-      border-radius: 10px;
-      border: 1px solid rgba(55,65,81,0.9);
-      background: rgba(15,23,42,0.98);
-      padding: 7px 9px;
-      font-family: inherit;
-      font-size: 13px;
-      color: var(--text);
-      outline: none;
-    }
-
-    .field textarea {
-      resize: vertical;
-      min-height: 80px;
-    }
-
-    .field input:focus,
-    .field textarea:focus {
-      border-color: rgba(249,115,22,0.7);
-      box-shadow: 0 0 0 1px rgba(249,115,22,0.3);
-    }
-
     footer {
-      margin-top: 40px;
-      padding-top: 16px;
-      border-top: 1px solid rgba(31,41,55,0.9);
+      margin-top: 30px;
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
       font-size: 12px;
       color: var(--muted);
       display: flex;
       justify-content: space-between;
       gap: 10px;
       flex-wrap: wrap;
-    }
-
-    .socials {
-      display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-    }
-
-    .socials a {
-      font-size: 12px;
-      padding: 4px 9px;
-      border-radius: 999px;
-      border: 1px solid rgba(55,65,81,0.9);
-      background: rgba(15,23,42,0.98);
-    }
-
-    @media (max-width: 900px) {
-      .hero {
-        grid-template-columns: minmax(0, 1fr);
-      }
-
-      .hero-card {
-        order: -1;
-      }
-
-      nav {
-        display: none;
-      }
-    }
-
-    @media (max-width: 640px) {
-      .page {
-        padding: 18px 14px 56px;
-      }
-
-      .grid-2,
-      .contact-grid {
-        grid-template-columns: minmax(0, 1fr);
-      }
     }
   </style>
 </head>
@@ -451,286 +364,262 @@
       <div class="logo">
         <div class="logo-mark">JQ</div>
         <div class="logo-text">
+          <span>Boutique</span>
           <span>JQ Wear</span>
-          <span>Jesus Quijada</span>
         </div>
       </div>
 
       <nav>
-        <a href="#collections">Collections</a>
-        <a href="#personnalisation">Personnalisation</a>
-        <a href="#process">Commander</a>
+        <a href="#femmes">Femmes</a>
+        <a href="#hommes">Hommes</a>
+        <a href="#nouveautes">Nouveautés</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
 
-    <main>
-
-      <!-- HERO -->
-      <section class="hero">
-        <div>
-          <div class="badge">
-            <span class="badge-pill">Marque locale</span>
-            <span>Repentigny · Québec</span>
-          </div>
-
-          <h1>
-            Vêtements <span>sportifs</span> & streetwear
-            personnalisés pour le <span>quotidien</span>.
-          </h1>
-
-          <p>
-            Hoodies, t-shirts et joggers conçus pour la vie au Québec :
-            chauds, confortables et personnalisables avec votre nom, votre logo ou un message qui vous représente.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#collections" class="btn btn-primary">Voir les modèles</a>
-            <a href="#personnalisation" class="btn btn-ghost">Demander une pièce personnalisée</a>
-          </div>
-
-          <div class="hero-meta">
-            Commandes pour particuliers, équipes sportives, groupes et petites entreprises. FR / ES.
-          </div>
-        </div>
-
-        <aside class="hero-card">
-          <div class="hero-card-title">JQ Wear en bref</div>
-          <div class="hero-card-sub">
-            Une approche simple : bons tissus, coupes confortables, personnalisation claire
-            et échanges directs avec le créateur.
-          </div>
-          <div class="hero-card-grid">
-            <div class="hero-tag">
-              Délai moyen
-              <span>3–7 j</span>
-            </div>
-            <div class="hero-tag">
-              Quantité min.
-              <span>1 pièce</span>
-            </div>
-            <div class="hero-tag">
-              Personnalisation
-              <span>Texte / logo</span>
-            </div>
-            <div class="hero-tag">
-              Langues
-              <span>FR / ES</span>
-            </div>
-          </div>
-        </aside>
-      </section>
-
-      <!-- COLLECTIONS -->
-      <section class="section" id="collections">
-        <div class="section-label">Collections</div>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Collections principales JQ Wear</div>
-            <div class="section-sub">
-              Pièces essentielles pour s’entraîner, sortir ou simplement être à l’aise à la maison.
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Ligne Sport</div>
-              <div class="card-badge">Entraînement</div>
-            </div>
-            <p>
-              Vêtements pensés pour la salle de sport et les activités physiques.
-            </p>
-            <ul class="list">
-              <li>Hoodies & crewnecks</li>
-              <li>T-shirts oversize ou ajustés</li>
-              <li>Joggers confortables</li>
-              <li>Ensembles coordonnés (haut + bas)</li>
-            </ul>
-            <div class="pill-row">
-              <span class="pill">Tailles S–XXL</span>
-              <span class="pill">Couleurs neutres & vives</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Ligne Casual</div>
-              <div class="card-badge">Quotidien</div>
-            </div>
-            <p>
-              Pièces simples et propres pour le travail, les sorties ou les week-ends.
-            </p>
-            <ul class="list">
-              <li>T-shirts basiques de qualité</li>
-              <li>Hoodies minimalistes</li>
-              <li>Pièces unies prêtes à personnaliser</li>
-              <li>Caps & accessoires (bientôt)</li>
-            </ul>
-            <div class="pill-row">
-              <span class="pill">Style urbain</span>
-              <span class="pill">Designs discrets ou visibles</span>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <!-- PERSONNALISATION -->
-      <section class="section" id="personnalisation">
-        <div class="section-label">Personnalisation</div>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Vêtements personnalisés</div>
-            <div class="section-sub">
-              Parfait pour équipes, événements, groupes d’amis ou petites marques.
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Ce que vous pouvez personnaliser</div>
-              <div class="card-badge">Sur mesure</div>
-            </div>
-            <p>
-              Vous choisissez la pièce, la couleur et le type de personnalisation.
-            </p>
-            <ul class="list">
-              <li>Texte simple (nom, numéro, phrase courte)</li>
-              <li>Logo d’équipe ou d’entreprise (fichier fourni)</li>
-              <li>Zone d’impression définie ensemble</li>
-              <li>Prévisualisation avant production</li>
-            </ul>
-            <div class="pill-row">
-              <span class="pill">À partir d’1 pièce</span>
-              <span class="pill">Tarifs de groupe possibles</span>
-            </div>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Infos à préparer</div>
-              <div class="card-badge">Pour un devis rapide</div>
-            </div>
-            <p>
-              Pour que je puisse vous répondre rapidement, indiquez dans votre message :
-            </p>
-            <ul class="list">
-              <li>Type de vêtements (hoodies, t-shirts, joggers…)</li>
-              <li>Quantité approximative</li>
-              <li>Tailles et couleurs souhaitées</li>
-              <li>Texte ou logo à imprimer</li>
-              <li>Date à laquelle vous en avez besoin</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROCESS -->
-      <section class="section" id="process">
-        <div class="section-label">Commande</div>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Comment passer une commande</div>
-            <div class="section-sub">
-              Même si vous commencez juste avec une idée, on peut la transformer en projet concret.
-            </div>
-          </div>
-        </div>
-
-        <div class="grid-2">
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Étapes</div>
-              <div class="card-badge">Processus</div>
-            </div>
-            <ul class="list">
-              <li>1. Vous m’écrivez par WhatsApp ou Instagram avec votre idée.</li>
-              <li>2. On choisit ensemble le modèle, la couleur et la personnalisation.</li>
-              <li>3. Je vous envoie un prix et un délai clair.</li>
-              <li>4. Vous validez, je lance la production.</li>
-              <li>5. Livraison ou remise en main propre selon le cas.</li>
-            </ul>
-          </article>
-
-          <article class="card">
-            <div class="card-header">
-              <div class="card-title">Zone de service</div>
-              <div class="card-badge">Québec</div>
-            </div>
-            <p>
-              Basé à Repentigny, avec possibilité d’envoi dans tout le Québec.
-            </p>
-            <ul class="list">
-              <li>Remise en main propre possible autour de Repentigny / Montréal-Est.</li>
-              <li>Envois par poste ou service de livraison (frais à confirmer).</li>
-            </ul>
-          </article>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <div class="section-label">Contact</div>
-        <div class="section-header">
-          <div>
-            <div class="section-title">Parler avec JQ Wear</div>
-            <div class="section-sub">
-              Envoyez un message avec votre projet, même si ce n’est qu’une première idée.
-            </div>
-          </div>
-        </div>
-
-        <div class="contact-grid">
-          <article class="card">
-            <p style="font-size:13px; color:var(--muted); margin-bottom:10px;">
-              Coordonnées :
-            </p>
-            <ul class="list">
-              <!-- ⚠️ CAMBIA ESTO POR TUS DATOS REALES -->
-              <li><strong>WhatsApp :</strong> <a href="https://wa.me/1TONNUMERO" target="_blank">+1 (TON NUMÉRO ICI)</a></li>
-              <li><strong>Email :</strong> <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a></li>
-              <li><strong>Instagram :</strong> <a href="https://instagram.com/TON_COMPTE" target="_blank">@TON_COMPTE</a></li>
-            </ul>
-            <p style="font-size:12px; color:var(--muted); margin-top:8px;">
-              Remplace ces champs par tes vraies informations avant de partager la page.
-            </p>
-          </article>
-
-          <article class="card">
-            <p style="font-size:13px; color:var(--muted); margin-bottom:8px;">
-              Formulaire (visuel) :
-            </p>
-            <div class="field">
-              <label>Nom</label>
-              <input type="text" placeholder="Votre nom ou nom d’équipe" />
-            </div>
-            <div class="field">
-              <label>Type de projet</label>
-              <input type="text" placeholder="Hoodies d’équipe, t-shirts, ensemble..." />
-            </div>
-            <div class="field">
-              <label>Message</label>
-              <textarea placeholder="Expliquez votre idée, les quantités et la date souhaitée."></textarea>
-            </div>
-            <button class="btn btn-primary" style="width:100%; justify-content:center; cursor:default;">
-              Envoyer (maquette – à connecter plus tard)
-            </button>
-          </article>
-        </div>
-      </section>
-
-    </main>
-
-    <footer>
-      <span>© <span id="year"></span> JQ Wear – Jesus Quijada.</span>
-      <div class="socials">
-        <a href="#collections">Collections</a>
-        <a href="#personnalisation">Personnalisation</a>
-        <a href="#contact">Contact</a>
+    <!-- TITRE PAGE -->
+    <div class="page-title">
+      <div>
+        <h1>Collection JQ Wear</h1>
+        <span>Vêtements sportifs & casual personnalisés</span>
       </div>
+      <span>Québec · FR / ES</span>
+    </div>
+
+    <!-- LAYOUT BOUTIQUE -->
+    <div class="shop-layout">
+
+      <!-- FILTRES -->
+      <aside class="filters">
+        <h2>Filtres</h2>
+
+        <div class="filter-group">
+          <div class="filter-title">Genre</div>
+          <label class="filter-option">
+            <input type="checkbox" /> Femmes
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Hommes
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Unisexe
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Prix (visuel)</div>
+          <label class="filter-option">
+            <input type="checkbox" /> Moins de 50 $
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> 50 $ – 100 $
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Plus de 100 $
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Catégorie</div>
+          <label class="filter-option">
+            <input type="checkbox" /> Hoodies & crewnecks
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> T-shirts
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Joggers & pantalons
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Ensembles
+          </label>
+        </div>
+
+        <div class="filter-group">
+          <div class="filter-title">Personnalisation</div>
+          <label class="filter-option">
+            <input type="checkbox" /> Texte
+          </label>
+          <label class="filter-option">
+            <input type="checkbox" /> Logo
+          </label>
+        </div>
+      </aside>
+
+      <!-- ZONE PRODUITS -->
+      <section>
+        <div class="products-header">
+          <div class="pill-row">
+            <span class="pill">Tous les articles</span>
+            <span class="pill">Personnalisables</span>
+          </div>
+          <div>
+            <select class="select-small">
+              <option>Trier par : recommandé</option>
+              <option>Prix croissant</option>
+              <option>Prix décroissant</option>
+              <option>Nouveautés</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid">
+
+          <!-- PRODUIT 1 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <!-- cambia "img/hoodie1.jpg" por tu imagen -->
+              <img src="img/hoodie1.jpg" alt="Hoodie JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Hoodie JQ Wear Classic</div>
+                <div>
+                  <span class="price-current">59 $</span>
+                  <span class="price-old">69 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Hoodie unisexe, coupe confortable, idéal pour personnalisation.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#111827;"></div>
+                <div class="color-dot" style="background:#e5e7eb;"></div>
+                <div class="color-dot" style="background:#f97316;"></div>
+                <span style="font-size:12px; color:var(--muted);">+ autres couleurs</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 2 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="img/jogger1.jpg" alt="Jogger JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Jogger Performance</div>
+                <div>
+                  <span class="price-current">49 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Tissu doux, parfait pour l’entraînement ou le quotidien.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#4b5563;"></div>
+                <div class="color-dot" style="background:#6b7280;"></div>
+                <div class="color-dot" style="background:#9ca3af;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 3 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="img/tshirt1.jpg" alt="T-shirt JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">T-shirt Oversize Logo</div>
+                <div>
+                  <span class="price-current">29 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                T-shirt oversize, idéal pour un logo ou un message court.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#111827;"></div>
+                <div class="color-dot" style="background:#f97316;"></div>
+                <div class="color-dot" style="background:#f9fafb;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 4 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="img/set1.jpg" alt="Ensemble JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Ensemble Hoodie + Jogger</div>
+                <div>
+                  <span class="price-current">99 $</span>
+                  <span class="price-old">119 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Ensemble complet, parfait pour équipes et groupes.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#1f2937;"></div>
+                <div class="color-dot" style="background:#dc2626;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 5 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="img/short1.jpg" alt="Short JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Short training</div>
+                <div>
+                  <span class="price-current">35 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Léger et respirant, parfait pour la course et la salle.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#2563eb;"></div>
+                <div class="color-dot" style="background:#10b981;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 6 -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="img/top1.jpg" alt="Top JQ Wear" class="product-image" />
+              <button class="favorite-btn">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Crop top sport</div>
+                <div>
+                  <span class="price-current">32 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Pour entraînements ou tenues casual sportives.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#f97316;"></div>
+                <div class="color-dot" style="background:#ec4899;"></div>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+    </div>
+
+    <!-- FOOTER -->
+    <footer id="contact">
+      <span>© <span id="year"></span> JQ Wear – Boutique.</span>
+      <span style="font-size:12px;">
+        Contact WhatsApp / Instagram – ajoute tes liens ici plus tard.
+      </span>
     </footer>
 
   </div>
@@ -740,5 +629,3 @@
   </script>
 </body>
 </html>
-<!-- update -->
-
