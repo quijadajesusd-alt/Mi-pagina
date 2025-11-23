@@ -62,4 +62,683 @@
       width: 32px;
       height: 32px;
       border-radius: 999px;
-      background: conic-gradient(from 180deg, #f97316, #f
+      background: conic-gradient(from 180deg, #f97316, #facc15, #ec4899, #f97316);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 18px;
+      box-shadow: 0 0 24px rgba(249,115,22,0.7);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .logo-text span:first-child {
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+    }
+
+    .logo-text span:last-child {
+      font-size: 16px;
+      font-weight: 600;
+    }
+
+    nav {
+      display: flex;
+      gap: 16px;
+      font-size: 14px;
+      color: var(--muted);
+    }
+
+    nav a {
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid transparent;
+    }
+
+    nav a:hover {
+      border-color: rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.8);
+      color: var(--text);
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.5fr) minmax(0, 1.1fr);
+      gap: 32px;
+      align-items: center;
+      margin-bottom: 48px;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 10px 4px 4px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.9);
+      border: 1px solid rgba(148,163,184,0.4);
+      font-size: 12px;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+
+    .badge-pill {
+      padding: 4px 10px;
+      border-radius: 999px;
+      background: var(--accent-soft);
+      color: var(--accent);
+      font-weight: 600;
+      font-size: 11px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      font-size: clamp(32px, 3.2vw, 40px);
+      line-height: 1.1;
+      margin: 0 0 12px;
+    }
+
+    .hero h1 span {
+      background: linear-gradient(to right, #f97316, #facc15);
+      -webkit-background-clip: text;
+      color: transparent;
+    }
+
+    .hero p {
+      margin: 0 0 20px;
+      color: var(--muted);
+      max-width: 520px;
+      font-size: 15px;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-bottom: 10px;
+    }
+
+    .btn {
+      border-radius: 999px;
+      padding: 10px 18px;
+      font-size: 14px;
+      border: 1px solid transparent;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.18s ease;
+    }
+
+    .btn-primary {
+      background: radial-gradient(circle at top left, #facc15, #f97316);
+      color: #0b0f1a;
+      font-weight: 600;
+      box-shadow: 0 14px 32px rgba(249,115,22,0.45);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px) scale(1.01);
+      box-shadow: 0 16px 40px rgba(249,115,22,0.6);
+    }
+
+    .btn-ghost {
+      border-color: rgba(148,163,184,0.4);
+      background: rgba(15,23,42,0.9);
+      color: var(--muted);
+    }
+
+    .hero-meta {
+      font-size: 12px;
+      color: var(--muted);
+    }
+
+    .hero-card {
+      background: radial-gradient(circle at top, rgba(249,115,22,0.18), rgba(15,23,42,0.98));
+      border-radius: 28px;
+      padding: 18px 18px 16px;
+      border: 1px solid rgba(148,163,184,0.5);
+      box-shadow: var(--shadow-soft);
+      position: relative;
+      overflow: hidden;
+      font-size: 13px;
+    }
+
+    .hero-card-title {
+      font-size: 18px;
+      font-weight: 600;
+      margin-bottom: 8px;
+    }
+
+    .hero-card-sub {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 10px;
+    }
+
+    .hero-card-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0,1fr));
+      gap: 10px;
+      font-size: 12px;
+    }
+
+    .hero-tag {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      background: rgba(15,23,42,0.96);
+      border: 1px solid rgba(55,65,81,0.9);
+      color: var(--muted);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      justify-content: space-between;
+    }
+
+    .hero-tag span {
+      font-size: 13px;
+      font-weight: 600;
+      color: #fbbf24;
+    }
+
+    .section {
+      margin-bottom: 40px;
+    }
+
+    .section-label {
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.16em;
+      color: var(--muted);
+      margin-bottom: 6px;
+    }
+
+    .section-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 18px;
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      background: rgba(15,23,42,0.96);
+      border-radius: var(--radius-xl);
+      border: 1px solid var(--border);
+      padding: 14px 14px 16px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.45);
+    }
+
+    .card-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 10px;
+      margin-bottom: 8px;
+    }
+
+    .card-title {
+      font-size: 15px;
+      font-weight: 600;
+    }
+
+    .card-badge {
+      font-size: 11px;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(249,115,22,0.12);
+      color: var(--accent);
+      border: 1px solid rgba(249,115,22,0.5);
+    }
+
+    .card p {
+      margin: 0 0 8px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .list {
+      margin: 0;
+      padding-left: 18px;
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    .list li {
+      margin-bottom: 4px;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 8px;
+    }
+
+    .pill {
+      font-size: 11px;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.96);
+      color: var(--muted);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
+      gap: 16px;
+    }
+
+    .field {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+
+    .field label {
+      color: var(--muted);
+    }
+
+    .field input,
+    .field textarea {
+      border-radius: 10px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.98);
+      padding: 7px 9px;
+      font-family: inherit;
+      font-size: 13px;
+      color: var(--text);
+      outline: none;
+    }
+
+    .field textarea {
+      resize: vertical;
+      min-height: 80px;
+    }
+
+    .field input:focus,
+    .field textarea:focus {
+      border-color: rgba(249,115,22,0.7);
+      box-shadow: 0 0 0 1px rgba(249,115,22,0.3);
+    }
+
+    footer {
+      margin-top: 40px;
+      padding-top: 16px;
+      border-top: 1px solid rgba(31,41,55,0.9);
+      font-size: 12px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .socials {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .socials a {
+      font-size: 12px;
+      padding: 4px 9px;
+      border-radius: 999px;
+      border: 1px solid rgba(55,65,81,0.9);
+      background: rgba(15,23,42,0.98);
+    }
+
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: minmax(0, 1fr);
+      }
+
+      .hero-card {
+        order: -1;
+      }
+
+      nav {
+        display: none;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page {
+        padding: 18px 14px 56px;
+      }
+
+      .grid-2,
+      .contact-grid {
+        grid-template-columns: minmax(0, 1fr);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="page">
+
+    <!-- HEADER -->
+    <header>
+      <div class="logo">
+        <div class="logo-mark">JQ</div>
+        <div class="logo-text">
+          <span>JQ Wear</span>
+          <span>Jesus Quijada</span>
+        </div>
+      </div>
+
+      <nav>
+        <a href="#collections">Collections</a>
+        <a href="#personnalisation">Personnalisation</a>
+        <a href="#process">Commander</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main>
+
+      <!-- HERO -->
+      <section class="hero">
+        <div>
+          <div class="badge">
+            <span class="badge-pill">Marque locale</span>
+            <span>Repentigny · Québec</span>
+          </div>
+
+          <h1>
+            Vêtements <span>sportifs</span> & streetwear
+            personnalisés pour le <span>quotidien</span>.
+          </h1>
+
+          <p>
+            Hoodies, t-shirts et joggers conçus pour la vie au Québec :
+            chauds, confortables et personnalisables avec votre nom, votre logo ou un message qui vous représente.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#collections" class="btn btn-primary">Voir les modèles</a>
+            <a href="#personnalisation" class="btn btn-ghost">Demander une pièce personnalisée</a>
+          </div>
+
+          <div class="hero-meta">
+            Commandes pour particuliers, équipes sportives, groupes et petites entreprises. FR / ES.
+          </div>
+        </div>
+
+        <aside class="hero-card">
+          <div class="hero-card-title">JQ Wear en bref</div>
+          <div class="hero-card-sub">
+            Une approche simple : bons tissus, coupes confortables, personnalisation claire
+            et échanges directs avec le créateur.
+          </div>
+          <div class="hero-card-grid">
+            <div class="hero-tag">
+              Délai moyen
+              <span>3–7 j</span>
+            </div>
+            <div class="hero-tag">
+              Quantité min.
+              <span>1 pièce</span>
+            </div>
+            <div class="hero-tag">
+              Personnalisation
+              <span>Texte / logo</span>
+            </div>
+            <div class="hero-tag">
+              Langues
+              <span>FR / ES</span>
+            </div>
+          </div>
+        </aside>
+      </section>
+
+      <!-- COLLECTIONS -->
+      <section class="section" id="collections">
+        <div class="section-label">Collections</div>
+        <div class="section-header">
+          <div>
+            <div class="section-title">Collections principales JQ Wear</div>
+            <div class="section-sub">
+              Pièces essentielles pour s’entraîner, sortir ou simplement être à l’aise à la maison.
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Ligne Sport</div>
+              <div class="card-badge">Entraînement</div>
+            </div>
+            <p>
+              Vêtements pensés pour la salle de sport et les activités physiques.
+            </p>
+            <ul class="list">
+              <li>Hoodies & crewnecks</li>
+              <li>T-shirts oversize ou ajustés</li>
+              <li>Joggers confortables</li>
+              <li>Ensembles coordonnés (haut + bas)</li>
+            </ul>
+            <div class="pill-row">
+              <span class="pill">Tailles S–XXL</span>
+              <span class="pill">Couleurs neutres & vives</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Ligne Casual</div>
+              <div class="card-badge">Quotidien</div>
+            </div>
+            <p>
+              Pièces simples et propres pour le travail, les sorties ou les week-ends.
+            </p>
+            <ul class="list">
+              <li>T-shirts basiques de qualité</li>
+              <li>Hoodies minimalistes</li>
+              <li>Pièces unies prêtes à personnaliser</li>
+              <li>Caps & accessoires (bientôt)</li>
+            </ul>
+            <div class="pill-row">
+              <span class="pill">Style urbain</span>
+              <span class="pill">Designs discrets ou visibles</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- PERSONNALISATION -->
+      <section class="section" id="personnalisation">
+        <div class="section-label">Personnalisation</div>
+        <div class="section-header">
+          <div>
+            <div class="section-title">Vêtements personnalisés</div>
+            <div class="section-sub">
+              Parfait pour équipes, événements, groupes d’amis ou petites marques.
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Ce que vous pouvez personnaliser</div>
+              <div class="card-badge">Sur mesure</div>
+            </div>
+            <p>
+              Vous choisissez la pièce, la couleur et le type de personnalisation.
+            </p>
+            <ul class="list">
+              <li>Texte simple (nom, numéro, phrase courte)</li>
+              <li>Logo d’équipe ou d’entreprise (fichier fourni)</li>
+              <li>Zone d’impression définie ensemble</li>
+              <li>Prévisualisation avant production</li>
+            </ul>
+            <div class="pill-row">
+              <span class="pill">À partir d’1 pièce</span>
+              <span class="pill">Tarifs de groupe possibles</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Infos à préparer</div>
+              <div class="card-badge">Pour un devis rapide</div>
+            </div>
+            <p>
+              Pour que je puisse vous répondre rapidement, indiquez dans votre message :
+            </p>
+            <ul class="list">
+              <li>Type de vêtements (hoodies, t-shirts, joggers…)</li>
+              <li>Quantité approximative</li>
+              <li>Tailles et couleurs souhaitées</li>
+              <li>Texte ou logo à imprimer</li>
+              <li>Date à laquelle vous en avez besoin</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- PROCESS -->
+      <section class="section" id="process">
+        <div class="section-label">Commande</div>
+        <div class="section-header">
+          <div>
+            <div class="section-title">Comment passer une commande</div>
+            <div class="section-sub">
+              Même si vous commencez juste avec une idée, on peut la transformer en projet concret.
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-2">
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Étapes</div>
+              <div class="card-badge">Processus</div>
+            </div>
+            <ul class="list">
+              <li>1. Vous m’écrivez par WhatsApp ou Instagram avec votre idée.</li>
+              <li>2. On choisit ensemble le modèle, la couleur et la personnalisation.</li>
+              <li>3. Je vous envoie un prix et un délai clair.</li>
+              <li>4. Vous validez, je lance la production.</li>
+              <li>5. Livraison ou remise en main propre selon le cas.</li>
+            </ul>
+          </article>
+
+          <article class="card">
+            <div class="card-header">
+              <div class="card-title">Zone de service</div>
+              <div class="card-badge">Québec</div>
+            </div>
+            <p>
+              Basé à Repentigny, avec possibilité d’envoi dans tout le Québec.
+            </p>
+            <ul class="list">
+              <li>Remise en main propre possible autour de Repentigny / Montréal-Est.</li>
+              <li>Envois par poste ou service de livraison (frais à confirmer).</li>
+            </ul>
+          </article>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <div class="section-label">Contact</div>
+        <div class="section-header">
+          <div>
+            <div class="section-title">Parler avec JQ Wear</div>
+            <div class="section-sub">
+              Envoyez un message avec votre projet, même si ce n’est qu’une première idée.
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-grid">
+          <article class="card">
+            <p style="font-size:13px; color:var(--muted); margin-bottom:10px;">
+              Coordonnées :
+            </p>
+            <ul class="list">
+              <!-- ⚠️ CAMBIA ESTO POR TUS DATOS REALES -->
+              <li><strong>WhatsApp :</strong> <a href="https://wa.me/1TONNUMERO" target="_blank">+1 (TON NUMÉRO ICI)</a></li>
+              <li><strong>Email :</strong> <a href="mailto:ton.email@exemple.com">ton.email@exemple.com</a></li>
+              <li><strong>Instagram :</strong> <a href="https://instagram.com/TON_COMPTE" target="_blank">@TON_COMPTE</a></li>
+            </ul>
+            <p style="font-size:12px; color:var(--muted); margin-top:8px;">
+              Remplace ces champs par tes vraies informations avant de partager la page.
+            </p>
+          </article>
+
+          <article class="card">
+            <p style="font-size:13px; color:var(--muted); margin-bottom:8px;">
+              Formulaire (visuel) :
+            </p>
+            <div class="field">
+              <label>Nom</label>
+              <input type="text" placeholder="Votre nom ou nom d’équipe" />
+            </div>
+            <div class="field">
+              <label>Type de projet</label>
+              <input type="text" placeholder="Hoodies d’équipe, t-shirts, ensemble..." />
+            </div>
+            <div class="field">
+              <label>Message</label>
+              <textarea placeholder="Expliquez votre idée, les quantités et la date souhaitée."></textarea>
+            </div>
+            <button class="btn btn-primary" style="width:100%; justify-content:center; cursor:default;">
+              Envoyer (maquette – à connecter plus tard)
+            </button>
+          </article>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <span>© <span id="year"></span> JQ Wear – Jesus Quijada.</span>
+      <div class="socials">
+        <a href="#collections">Collections</a>
+        <a href="#personnalisation">Personnalisation</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+<!-- update -->
+
