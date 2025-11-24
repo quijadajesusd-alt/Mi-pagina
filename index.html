@@ -2,9 +2,9 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>JQ Wear – Boutique</title>
+  <title>Valkyra – Boutique</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="JQ Wear – Boutique de vêtements sportifs et streetwear minimalistes à Repentigny, Québec." />
+  <meta name="description" content="Valkyra – Vêtements sportifs & streetwear minimalistes pour femmes et hommes." />
 
   <style>
     :root {
@@ -64,17 +64,12 @@
       gap: 10px;
     }
 
-    .logo-mark {
-      width: 30px;
-      height: 30px;
-      border-radius: 4px;
-      background: #111111;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-weight: 700;
-      font-size: 15px;
-      color: #f9fafb;
+    .logo-mark-img {
+      width: 40px;
+      height: 40px;
+      border-radius: 6px;
+      object-fit: cover;
+      background: #111;
     }
 
     .logo-text {
@@ -369,10 +364,11 @@
     <!-- HEADER -->
     <header>
       <div class="logo">
-        <div class="logo-mark">JQ</div>
+        <!-- logo de Valkyra -->
+        <img src="logo-valkyra-rose.png" alt="Logo Valkyra" class="logo-mark-img" />
         <div class="logo-text">
-          <span>BOUTIQUE</span>
-          <span>JQ WEAR</span>
+          <span>VALKYRA</span>
+          <span>Athleisure & Streetwear</span>
         </div>
       </div>
 
@@ -387,10 +383,10 @@
     <!-- TITRE PAGE -->
     <div class="page-title">
       <div>
-        <h1>Collection JQ Wear</h1>
-        <span>Vêtements sportifs & streetwear minimalistes, inspirés par le quotidien au Québec.</span>
+        <h1>Collection Valkyra</h1>
+        <span>Pièces minimalistes pour l’entraînement, le quotidien et la rue.</span>
       </div>
-      <span>FR / ES · Repentigny</span>
+      <span>FR / ES · Québec</span>
     </div>
 
     <!-- LAYOUT BOUTIQUE -->
@@ -416,38 +412,36 @@
         <div class="filter-group">
           <div class="filter-title">Prix (visuel)</div>
           <label class="filter-option">
-            <input type="checkbox" /> Moins de 50 $
+            <input type="checkbox" /> - de 50 $
           </label>
           <label class="filter-option">
             <input type="checkbox" /> 50 $ – 100 $
           </label>
           <label class="filter-option">
-            <input type="checkbox" /> Plus de 100 $
+            <input type="checkbox" /> + de 100 $
           </label>
         </div>
 
         <div class="filter-group">
           <div class="filter-title">Catégorie</div>
           <label class="filter-option">
-            <input type="checkbox" /> Hoodies & crewnecks
+            <input type="checkbox" /> Joggers
           </label>
           <label class="filter-option">
-            <input type="checkbox" /> T-shirts
+            <input type="checkbox" /> Hoodies & tops
           </label>
           <label class="filter-option">
-            <input type="checkbox" /> Joggers & pantalons
+            <input type="checkbox" /> Ensembles
           </label>
-          <label class="filter-option">
-            <input type="checkbox" /> Ensembles</label>
         </div>
 
         <div class="filter-group">
           <div class="filter-title">Personnalisation</div>
           <label class="filter-option">
-            <input type="checkbox" /> Texte
+            <input type="checkbox" /> Logo Valkyra
           </label>
           <label class="filter-option">
-            <input type="checkbox" /> Logo
+            <input type="checkbox" /> Logo Skull
           </label>
         </div>
       </aside>
@@ -457,7 +451,7 @@
         <div class="products-header">
           <div class="pill-row">
             <span class="pill">Tous les articles</span>
-            <span class="pill">Personnalisables</span>
+            <span class="pill">Nouvelle collection</span>
           </div>
           <div>
             <select class="select-small">
@@ -471,147 +465,117 @@
 
         <div class="products-grid">
 
-          <!-- PRODUIT 1 -->
-          <article class="product-card">
+          <!-- PRODUIT 1 – Jogger Valkyra Rose (hoodie1.png) -->
+          <article class="product-card" id="femmes">
             <div class="product-image-wrapper">
-              <!-- Remplace "img/hoodie1.jpg" par ton image -->
-              <img src="img/hoodie1.jpg" alt="Hoodie JQ Wear Classic" class="product-image" />
+              <img src="hoodie1.png" alt="Jogger Valkyra Rose" class="product-image" />
               <button class="favorite-btn" type="button">♡</button>
             </div>
             <div class="product-body">
               <div class="product-meta">
-                <div class="product-name">Hoodie JQ Wear Classic</div>
+                <div class="product-name">Jogger Valkyra Rose</div>
                 <div>
                   <span class="price-current">59 $</span>
-                  <span class="price-old">69 $</span>
                 </div>
               </div>
               <div class="product-tagline">
-                Hoodie unisexe, coupe confortable, parfait pour personnalisation discrète ou visible.
+                Jogger femme taille haute, coupe confortable, logo Valkyra rose gold.
+              </div>
+              <div class="color-row">
+                <div class="color-dot" style="background:#d59695;"></div>
+                <div class="color-dot" style="background:#f5f5f5;"></div>
+              </div>
+            </div>
+          </article>
+
+          <!-- PRODUIT 2 – Hoodie & jogger (jogger1.png) -->
+          <article class="product-card">
+            <div class="product-image-wrapper">
+              <img src="jogger1.png" alt="Crew Valkyra Hoodie & Jogger" class="product-image" />
+              <button class="favorite-btn" type="button">♡</button>
+            </div>
+            <div class="product-body">
+              <div class="product-meta">
+                <div class="product-name">Crew Valkyra Hoodie</div>
+                <div>
+                  <span class="price-current">79 $</span>
+                </div>
+              </div>
+              <div class="product-tagline">
+                Hoodie unisexe avec logo Valkyra ou Skull, parfait pour équipes et amis.
               </div>
               <div class="color-row">
                 <div class="color-dot" style="background:#111111;"></div>
-                <div class="color-dot" style="background:#e5e7eb;"></div>
-                <div class="color-dot" style="background:#c4b7a6;"></div>
-                <span style="font-size:12px; color:var(--muted);">+ autres couleurs</span>
+                <div class="color-dot" style="background:#f3e3da;"></div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUIT 2 -->
+          <!-- PRODUIT 3 – Ensemble femmes (set1.png) -->
           <article class="product-card">
             <div class="product-image-wrapper">
-              <img src="img/jogger1.jpg" alt="Jogger JQ Wear Performance" class="product-image" />
+              <img src="set1.png" alt="Ensemble Valkyra Women" class="product-image" />
               <button class="favorite-btn" type="button">♡</button>
             </div>
             <div class="product-body">
               <div class="product-meta">
-                <div class="product-name">Jogger Performance</div>
+                <div class="product-name">Ensemble Valkyra Women</div>
                 <div>
-                  <span class="price-current">49 $</span>
+                  <span class="price-current">99 $</span>
                 </div>
               </div>
               <div class="product-tagline">
-                Tissu doux, idéal pour l’entraînement, le travail à la maison ou les sorties.
-              </div>
-              <div class="color-row">
-                <div class="color-dot" style="background:#4b4b4b;"></div>
-                <div class="color-dot" style="background:#7b7b7b;"></div>
-                <div class="color-dot" style="background:#b0b0b0;"></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUIT 3 -->
-          <article class="product-card">
-            <div class="product-image-wrapper">
-              <img src="img/tshirt1.jpg" alt="T-shirt Oversize Logo" class="product-image" />
-              <button class="favorite-btn" type="button">♡</button>
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <div class="product-name">T-shirt Oversize Logo</div>
-                <div>
-                  <span class="price-current">29 $</span>
-                </div>
-              </div>
-              <div class="product-tagline">
-                T-shirt oversize minimaliste, parfait pour un logo ou un message court.
+                Legging + top coordonnés, idéal pour l’entraînement ou les cours de gym.
               </div>
               <div class="color-row">
                 <div class="color-dot" style="background:#111111;"></div>
                 <div class="color-dot" style="background:#f5f5f5;"></div>
-                <div class="color-dot" style="background:#c4b7a6;"></div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUIT 4 -->
-          <article class="product-card">
+          <!-- PRODUIT 4 – Jogger Skull homme (skull-jogger-black-front.png) -->
+          <article class="product-card" id="hommes">
             <div class="product-image-wrapper">
-              <img src="img/set1.jpg" alt="Ensemble Hoodie + Jogger" class="product-image" />
+              <img src="skull-jogger-black-front.png" alt="Jogger Skull Black" class="product-image" />
               <button class="favorite-btn" type="button">♡</button>
             </div>
             <div class="product-body">
               <div class="product-meta">
-                <div class="product-name">Ensemble Hoodie + Jogger</div>
+                <div class="product-name">Jogger Skull Black</div>
                 <div>
-                  <span class="price-current">99 $</span>
-                  <span class="price-old">119 $</span>
+                  <span class="price-current">59 $</span>
                 </div>
               </div>
               <div class="product-tagline">
-                Ensemble complet pour équipes, groupes ou tenues coordonnées.
+                Jogger homme noir avec logo Skull blanc, coupe ajustée et confortable.
               </div>
               <div class="color-row">
-                <div class="color-dot" style="background:#1f2937;"></div>
-                <div class="color-dot" style="background:#b91c1c;"></div>
+                <div class="color-dot" style="background:#111111;"></div>
+                <div class="color-dot" style="background:#e5e7eb;"></div>
               </div>
             </div>
           </article>
 
-          <!-- PRODUIT 5 -->
-          <article class="product-card">
+          <!-- PRODUIT 5 – Top Valkyra (top1.png) -->
+          <article class="product-card" id="nouveautes">
             <div class="product-image-wrapper">
-              <img src="img/short1.jpg" alt="Short training" class="product-image" />
+              <img src="top1.png" alt="Top Valkyra Rose Gold" class="product-image" />
               <button class="favorite-btn" type="button">♡</button>
             </div>
             <div class="product-body">
               <div class="product-meta">
-                <div class="product-name">Short Training</div>
+                <div class="product-name">Top Valkyra Rose Gold</div>
                 <div>
-                  <span class="price-current">35 $</span>
+                  <span class="price-current">39 $</span>
                 </div>
               </div>
               <div class="product-tagline">
-                Léger et respirant, parfait pour la course et la salle de sport.
+                Top sport femme avec logo Valkyra rose gold, maintien et style minimaliste.
               </div>
               <div class="color-row">
-                <div class="color-dot" style="background:#2563eb;"></div>
-                <div class="color-dot" style="background:#10b981;"></div>
-              </div>
-            </div>
-          </article>
-
-          <!-- PRODUIT 6 -->
-          <article class="product-card">
-            <div class="product-image-wrapper">
-              <img src="img/top1.jpg" alt="Crop top JQ Wear" class="product-image" />
-              <button class="favorite-btn" type="button">♡</button>
-            </div>
-            <div class="product-body">
-              <div class="product-meta">
-                <div class="product-name">Crop top sport</div>
-                <div>
-                  <span class="price-current">32 $</span>
-                </div>
-              </div>
-              <div class="product-tagline">
-                Silhouette sportive, idéale pour entraînements et looks casual.
-              </div>
-              <div class="color-row">
-                <div class="color-dot" style="background:#f97316;"></div>
-                <div class="color-dot" style="background:#ec4899;"></div>
+                <div class="color-dot" style="background:#111111;"></div>
+                <div class="color-dot" style="background:#f5f5f5;"></div>
               </div>
             </div>
           </article>
@@ -622,9 +586,9 @@
 
     <!-- FOOTER -->
     <footer id="contact">
-      <span>© <span id="year"></span> JQ Wear – Boutique.</span>
+      <span>© <span id="year"></span> Valkyra – Boutique.</span>
       <span style="font-size:12px;">
-        Contact : ajoute ici tes liens WhatsApp / Instagram quand tu seras prêt.
+        Bientôt : liens WhatsApp & Instagram pour commandes et collaborations.
       </span>
     </footer>
 
